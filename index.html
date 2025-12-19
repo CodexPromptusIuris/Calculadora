@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Luz y Sombra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calc-widget">
+    <header class="calc-header">
+        <h3>Estimador de Inversión</h3>
+        <div class="live-indicator">
+            <span class="dot"></span> UF Hoy: <span id="uf-display">Cargando...</span>
+        </div>
+    </header>
+
+    <div class="calc-body">
+        
+        <div class="input-group">
+            <label>Superficie (m²)</label>
+            <input type="number" id="m2" value="100" min="20" placeholder="Ej: 140">
+        </div>
+
+        <div class="input-group">
+            <label>Niveles</label>
+            <select id="niveles">
+                <option value="1">1 Piso (Más económico)</option>
+                <option value="1.08">2 Pisos (+ Estructura)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Topografía del Terreno</label>
+            <select id="pendiente">
+                <option value="1">Terreno Plano</option>
+                <option value="1.15">Pendiente Media (+ Fundaciones)</option>
+                <option value="1.30">Pendiente Alta (Complejo)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Estándar de Terminaciones</label>
+            <select id="calidad">
+                <option value="28">Estándar (28 UF/m²)</option>
+                <option value="35">Premium (35 UF/m²)</option>
+            </select>
+        </div>
+
+        <button id="btn-calcular" class="btn-primary">Calcular Estimación</button>
+        
+        <div id="resultado" class="result-area hidden">
+            <p>Rango de Inversión Estimado:</p>
+            <h2 id="precio-final">---</h2>
+            <small class="legal">*Valor referencial. Incluye honorarios y obra vendible.</small>
+            
+            <a id="link-whatsapp" href="#" target="_blank" class="btn-whatsapp">
+                Enviar ficha por WhatsApp
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

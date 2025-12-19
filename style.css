@@ -1,0 +1,125 @@
+:root {
+    --dark: #1a1a1a;
+    --gold: #c5a059;
+    --gray: #f4f4f4;
+    --whatsapp: #25D366;
+    --whatsapp-hover: #128C7E;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.calc-widget {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Cabecera */
+.calc-header {
+    background: var(--dark);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.calc-header h3 { margin: 0; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; }
+
+.live-indicator {
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot { height: 8px; width: 8px; background: #4caf50; border-radius: 50%; display: inline-block; }
+
+/* Cuerpo */
+.calc-body { padding: 30px; }
+
+.input-group { margin-bottom: 18px; }
+.input-group label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: #444; }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+input:focus, select:focus { border-color: var(--gold); outline: none; }
+
+/* Botones */
+.btn-primary {
+    width: 100%;
+    background: var(--dark);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover { background: #333; }
+
+/* Área de Resultados */
+.result-area {
+    margin-top: 25px;
+    padding: 20px;
+    background: var(--gray);
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--gold);
+    animation: fadeIn 0.5s ease;
+}
+
+.hidden { display: none; }
+
+.result-area p { margin: 0; font-size: 0.9rem; color: #666; }
+.result-area h2 { color: var(--dark); margin: 10px 0; font-size: 1.8rem; }
+.legal { display: block; font-size: 0.7rem; color: #999; margin-bottom: 15px; }
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+    display: block;
+    background-color: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--whatsapp-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
